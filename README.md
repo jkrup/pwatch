@@ -1,6 +1,8 @@
 # PWatch
 
-Get notified when your processes finishes.
+Get native notifications when your long running processes finish!
+
+![](assets/pwatchinaction.png)
 
 ## Usage
 
@@ -29,5 +31,13 @@ justink          60132   0.0  0.2  3041904  31712 s018  S+   12:15PM   0:00.20 s
 $ pwatch 60132
 ```
 
+You can even use it to be notified upon SSH tunnel closing.
+```
+$ ssh root@remotehost
+# in another shell...
+$ ps aux | grep ssh
+justink          60132   0.0  0.2  3041904  31712 s018  S+   12:15PM   0:00.20 ssh root@remotehost
+$ pwatch 60132
+```
+
 Then get notified when that process finishes.
-![](assets/pwatchinaction.png)
