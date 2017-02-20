@@ -2,7 +2,7 @@
 
 Get native notifications when your long running processes finish!
 
-![](assets/pwatchinaction.png)
+![](https://github.com/mazlix/pwatch/raw/master/assets/pwatchinaction.png)
 
 ## Usage
 
@@ -39,5 +39,6 @@ $ ps aux | grep ssh
 justink          60132   0.0  0.2  3041904  31712 s018  S+   12:15PM   0:00.20 ssh root@remotehost
 $ pwatch 60132
 ```
+![](https://github.com/mazlix/pwatch/raw/master/assets/pwatch.gif)
 
 Then get notified when that process finishes.
