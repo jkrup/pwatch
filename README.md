@@ -1,4 +1,4 @@
-# PWatch
+# PWatch [![npm version](https://badge.fury.io/js/pwatch.svg)](https://badge.fury.io/js/pwatch)
 
 Get native notifications when your long running processes finish!
 
