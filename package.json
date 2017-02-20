@@ -1,6 +1,6 @@
 {
   "name": "pwatch",
-  "version": "0.0.1",
+  "version": "0.0.2",
   "description": "Process Watcher",
   "main": "./index.js",
   "bin": {
@@ -9,7 +9,6 @@
   "scripts": {
     "prepublish": "babel src --out-dir dist",
     "watch": "babel -w src --out-dir dist",
-    "dev": "babel-node index.js",
     "test": "jest"
   },
   "author": "Justin Krup",

@@ -20,8 +20,8 @@ function handlePiped() {
 
 function handlePid(pid) {
     if (!pid) {
-        console.error('No pid specified');
-        process.exit(1);
+        notifier.notify('No pid specified');
+        process.exit(0);
     }
     checkPid(pid);
 }
