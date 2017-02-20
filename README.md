@@ -2,7 +2,19 @@
 
 Get native notifications when your long running processes finish!
 
+Running Database Migrations? Deploying apps? Compiling? Transfering large files? Get notified when your process has finished.
+
 ![](https://github.com/mazlix/pwatch/raw/master/assets/pwatchinaction.png)
+
+## Install
+
+Install it with [yarn](https://github.com/yarnpkg/yarn/) or npm:
+
+```
+$ yarn global add pwatch
+# or...
+$ npm install -g pwatch
+```
 
 ## Usage
 
