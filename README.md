@@ -11,8 +11,6 @@ Running Database Migrations? Deploying apps? Compiling? Transfering large files?
 Install it with [yarn](https://github.com/yarnpkg/yarn/) or npm:
 
 ```
-$ yarn global add pwatch
-# or...
 $ npm install -g pwatch
 ```
 
@@ -21,17 +19,17 @@ $ npm install -g pwatch
 Add `pwatch` at the end of your command.
 
 ```
-sleep 10 | pwatch
+$ sleep 10 | pwatch
 ```
 or
 
 ```
-sleep 10 && pwatch
+$ sleep 10 && pwatch
 ```
 or 
 
 ```
-sleep 10; pwatch
+$ sleep 10; pwatch
 ```
 
 Or if you forget to call it when running your command
