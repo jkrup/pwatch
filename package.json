@@ -1,10 +1,10 @@
 {
   "name": "pwatch",
-  "version": "0.0.4",
+  "version": "0.0.5",
   "description": "Process Watcher",
   "main": "./index.js",
   "bin": {
-      "pwatch": "./index.js"
+    "pwatch": "./index.js"
   },
   "scripts": {
     "prepublish": "babel src --out-dir dist",
@@ -19,6 +19,8 @@
     "jest": "^18.1.0"
   },
   "dependencies": {
-    "node-notifier": "^5.0.2"
+    "colors": "^1.1.2",
+    "node-notifier": "^5.0.2",
+    "ps-man": "jkrup/node-ps"
   }
 }

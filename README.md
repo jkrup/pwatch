@@ -19,25 +19,61 @@ $ npm install -g pwatch
 Add `pwatch` at the end of your command.
 
 ```
-$ sleep 10 | pwatch
+  pwatch <pid | command>
+
+
+  Commands:
+    search      [name]      Lists all processes by PID that match "name"
+
+
+  Examples:
+
+    – Notifies after 10 seconds
+
+      ${'$ sleep 10 | pwatch'.cyan}
+
+    – See all PID for node related processes
+
+      ${'$ pwatch search node'.cyan}
+
+    – Notify me when process 4030 ends
+
+      ${'$ pwatch 4030'.cyan}
+
+    – Run in background with a &
+
+      ${'$ sleep 10 | pwatch &'.cyan}
+  `)
+```
+
+### Examples
+
+```
+sleep 10 | pwatch
 ```
 or
 
 ```
-$ sleep 10 && pwatch
+sleep 10 && pwatch
 ```
 or 
 
 ```
-$ sleep 10; pwatch
+sleep 10; pwatch
+```
+
+Optionally add a `&` so pwatch runs in the background
+
+```
+sleep 10 | pwatch &
 ```
 
 Or if you forget to call it when running your command
 
 ```
 $ scp somelargefile.tar.gz root@remotehost:~
-$ ps aux | grep scp
-justink          60132   0.0  0.2  3041904  31712 s018  S+   12:15PM   0:00.20 scp somelargefile.tar.gz root@remotehost:~
+$ pwatch search scp
+    60132 - 0:00.20 scp somelargefile.tar.gz root@remotehost:~
 $ pwatch 60132
 ```
 
