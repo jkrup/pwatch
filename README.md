@@ -43,7 +43,6 @@ Add `pwatch` at the end of your command.
     – Run in background with a &
 
       ${'$ sleep 10 | pwatch &'.cyan}
-  `)
 ```
 
 ### Examples
