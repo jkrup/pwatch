@@ -2,15 +2,7 @@ import tty from 'tty';
 import notifier from 'node-notifier';
 import ps from 'ps-man';
 import 'colors';
-
-function checkPid(pid, cb = () => { notifier.notify(`Process ${pid}: Completed`); }) {
-  ps.list({ pid }, (err, res) => {
-    if (res.length === 0) {
-      return cb();
-    }
-    return setTimeout(checkPid.bind(this, pid, cb), 1000);
-  });
-}
+import { spawn } from 'child_process';
 
 function handlePiped() {
   process.stdin.on('data', () => { }); // required so that readable is called on end
@@ -52,7 +44,7 @@ function help() {
 
       ${'$ pwatch 4030'.cyan}
 
-    ${'–'.grey} Run in background with a &
+    ${'–'.grey} Run a chained process in the background
 
       ${'$ sleep 10 | pwatch &'.cyan}
   `);
@@ -68,7 +60,11 @@ function handlePid(pid) {
   } else if (Number.isNaN(Number(pid))) {
     help();
   } else {
-    checkPid(pid);
+    // Run in BG
+    spawn('node', ['dist/runCheckPid.js', pid], {
+      stdio: 'ignore',
+      detached: true,
+    }).unref();
   }
 }
 
