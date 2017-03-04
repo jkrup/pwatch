@@ -40,7 +40,7 @@ Add `pwatch` at the end of your command.
 
       ${'$ pwatch 4030'.cyan}
 
-    – Run in background with a &
+    – Run a chained process in background with a &
 
       ${'$ sleep 10 | pwatch &'.cyan}
 ```
