@@ -1,6 +1,6 @@
 {
   "name": "pwatch",
-  "version": "0.0.6",
+  "version": "0.0.7",
   "description": "Process Watcher",
   "main": "./index.js",
   "bin": {

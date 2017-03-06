@@ -61,7 +61,7 @@ function handlePid(pid) {
     help();
   } else {
     // Run in BG
-    spawn('node', ['dist/runCheckPid.js', pid], {
+    spawn('node', [`${__dirname}/runCheckPid.js`, pid], {
       stdio: 'ignore',
       detached: true,
     }).unref();
